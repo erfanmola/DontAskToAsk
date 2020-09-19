@@ -1,0 +1,1 @@
+A Simple translation/improvent of DontAskToAsk.com in persian langauge
