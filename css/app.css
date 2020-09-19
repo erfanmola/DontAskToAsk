@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Sahel VF";
+  src: url("../assets/fonts/Sahel/Sahel-VF.ttf") format("truetype"), url("../assets/fonts/Sahel/Sahel-VF.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Hack";
+  src: url("../assets/fonts/Hack/hack-regular-subset.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-hack {
+  font-family: "Hack", serif !important;
+}
+
+.light {
+  font-variation-settings: "wght" 400;
+}
+
+.normal {
+  font-variation-settings: "wght" 500;
+}
+
+.medium {
+  font-variation-settings: "wght" 600;
+}
+
+.bold {
+  font-variation-settings: "wght" 700;
+}
+
+.semi-black {
+  font-variation-settings: "wght" 800;
+}
+
+.black {
+  font-variation-settings: "wght" 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fafafa;
+    font-family: "Sahel VF", serif;
+    direction: rtl;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+::selection {
+    background: #3BB9FF;
+    color: white;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.holder {
+    width: 1024px;
+    margin: auto;
+}
+
+h1 {
+    float: right;
+    width: calc(100% - 56px);
+    font-size: 28px;
+    color: #353535;
+    padding: 8px 12px;
+    margin: 18px 12px;
+    border-right: 6px solid #F8BBD0;
+}
+
+p {
+    float: right;
+    width: calc(100% - 24px);
+    text-align: justify;
+    margin: 6px 0;
+    padding: 12px;
+    font-size: 18px;
+}
+
+blockquote {
+    float: right;
+    width: calc(100% - 56px);
+    margin: 12px;
+    border-right: 8px solid #C2185B;
+    background: rgba(0,0,0,0.025);
+    padding: 12px;
+}
+
+blockquote span {
+    float: right;
+    width: 10%;
+    text-align: center;
+    color: #353535;
+    font-size: 17px;
+}
+
+blockquote div {
+  float: right;
+  width: 90%;
+  text-align: justify;
+  line-height: 2;
+  color: #252525;
+  font-size: 16px;
+}
+
+blockquote div b {
+  color: #454545;
+}
+
+a {
+  float: right;
+  margin: 16px 0;
+  font-size: 16px;
+  color: #454545;
+  transition: color .15s;
+}
+
+a:hover {
+  color: #F06292;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .holder {
+    width: calc(100% - 32px) !important;
+    margin: 0 !important;
+    padding: 6px 16px !important;
+  }
+
+  h1 {
+    font-size: 24px !important;
+    padding: 8px 12px !important;
+    margin: 18px 12px !important;
+    border-width: 6px !important;
+  }
+
+  p {
+      width: calc(100% - 16px) !important;
+      margin: 6px 0 !important;
+      padding: 8px !important;
+      font-size: 17px !important;
+  }
+
+  blockquote {
+      width: calc(100% - 56px) !important;
+      margin: 8px 12px !important;
+      border-width: 8px !important;
+      padding: 12px !important;
+  }
+
+  blockquote span {
+      width: 15% !important;
+      font-size: 16px !important;
+  }
+
+  blockquote div {
+    width: 85% !important;
+    font-size: 15px !important;
+  }
+
+  a {
+    margin: 12px !important;
+    font-size: 15px !important;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 20px !important;
+    padding: 8px 12px !important;
+    margin: 18px 6px !important;
+    border-width: 6px !important;
+  }
+
+  p {
+      width: calc(100% - 16px) !important;
+      margin: 6px 0 !important;
+      padding: 8px !important;
+      font-size: 16px !important;
+  }
+
+  blockquote {
+      width: calc(100% - 56px) !important;
+      margin: 6px 12px !important;
+      border-width: 8px !important;
+      padding: 12px !important;
+  }
+
+  blockquote span {
+      width: 35% !important;
+      font-size: 15px !important;
+  }
+
+  blockquote div {
+    width: 65% !important;
+    font-size: 14px !important;
+    text-align: right !important;
+  }
+
+  a {
+    margin: 12px !important;
+    font-size: 14px !important;
+  }
+
+}
