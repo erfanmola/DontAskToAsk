@@ -255,3 +255,9 @@ a:hover {
   }
 
 }
+
+u {
+  text-decoration: none !important;
+  border-bottom: 1px solid #555555;
+  padding-bottom: 0;
+}
