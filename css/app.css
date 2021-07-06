@@ -2,18 +2,39 @@
 
 @font-face {
   font-family: "Sahel VF";
-  src: url("../assets/fonts/Sahel/Sahel-VF.ttf") format("truetype"), url("../assets/fonts/Sahel/Sahel-VF.woff2") format("woff2");
+  src: url("../assets/fonts/Sahel/Sahel-VF.ttf") format("truetype"), 
+       url("../assets/fonts/Sahel/Sahel-VF.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Hack";
-  src: url("../assets/fonts/Hack/hack-regular-subset.woff") format("woff");
-  font-weight: 400;
+  font-family: 'icomoon';
+  src:  url('../assets/fonts/icons/icomoon.eot?mcbfj1');
+  src:  url('../assets/fonts/icons/icomoon.eot?mcbfj1#iefix') format('embedded-opentype'),
+        url('../assets/fonts/icons/icomoon.ttf?mcbfj1') format('truetype'),
+        url('../assets/fonts/icons/icomoon.woff?mcbfj1') format('woff'),
+        url('../assets/fonts/icons/icomoon.svg?mcbfj1#icomoon') format('svg');
+  font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
-.font-hack {
-  font-family: "Hack", serif !important;
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-moon:before {
+  content: "\e900";
+}
+.icon-sun:before {
+  content: "\e901";
 }
 
 .light {
@@ -43,15 +64,36 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    transition: background-color .15s, color .15s, fill .15s;
+}
+
+:root {
+  --bg-color: #fafafa;
+  --color: #353535;
+  --color-secondary: #454545;
+  --bg-quote: rgba(0,0,0,0.025);
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-    background: #fafafa;
+    background: var(--bg-color);
     font-family: "Sahel VF", serif;
     direction: rtl;
     width: 100vw !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
+    color: var(--color);
+}
+
+body.dark {
+  --bg-color: #353535;
+  --color: rgba(255,255,255,0.9);
+  --color-secondary: rgba(255,255,255,0.8);
+  --bg-quote: rgba(255,255,255,0.1);
 }
 
 body::-webkit-scrollbar {
@@ -108,11 +150,26 @@ label {
     margin: auto;
 }
 
+.toggle-mode {
+  float: left;
+  width: 10%;
+  text-align: left;
+  padding: 8px 0 0 8px;
+  margin: 18px 0;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+
+.toggle-mode:hover {
+  opacity: 0.6;
+}
+
 h1 {
     float: right;
-    width: calc(100% - 56px);
-    font-size: 28px;
-    color: #353535;
+    width: calc(90% - 24px);
+    font-size: 1.75rem;
+    color: var(--color);
     padding: 8px 12px;
     margin: 18px 12px;
     border-right: 6px solid #F8BBD0;
@@ -120,19 +177,19 @@ h1 {
 
 p {
     float: right;
-    width: calc(100% - 24px);
+    width: 100%;
     text-align: justify;
     margin: 6px 0;
     padding: 12px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 blockquote {
     float: right;
-    width: calc(100% - 56px);
+    width: calc(100% - 24px);
     margin: 12px;
     border-right: 8px solid #C2185B;
-    background: rgba(0,0,0,0.025);
+    background: var(--bg-quote);
     padding: 12px;
 }
 
@@ -140,8 +197,8 @@ blockquote span {
     float: right;
     width: 10%;
     text-align: center;
-    color: #353535;
-    font-size: 17px;
+    color: var(--color);
+    font-size: 1.0625rem;
 }
 
 blockquote div {
@@ -149,19 +206,19 @@ blockquote div {
   width: 90%;
   text-align: justify;
   line-height: 2;
-  color: #252525;
-  font-size: 16px;
+  color: var(--color);
+  font-size: 1rem;
 }
 
 blockquote div b {
-  color: #454545;
+  color: var(--color-secondary);
 }
 
 a {
   float: right;
   margin: 16px 0;
-  font-size: 16px;
-  color: #454545;
+  font-size: 1rem;
+  color: var(--color-secondary);
   transition: color .15s;
 }
 
@@ -171,28 +228,30 @@ a:hover {
 
 @media screen and (max-width: 1024px) {
 
+  html {
+    font-size: 15px !important;
+  }
+
   .holder {
-    width: calc(100% - 32px) !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 6px 16px !important;
   }
 
   h1 {
-    font-size: 24px !important;
     padding: 8px 12px !important;
     margin: 18px 12px !important;
     border-width: 6px !important;
   }
 
   p {
-      width: calc(100% - 16px) !important;
+      width: 100% !important;
       margin: 6px 0 !important;
       padding: 8px !important;
-      font-size: 17px !important;
   }
 
   blockquote {
-      width: calc(100% - 56px) !important;
+      width: calc(100% - 24px) !important;
       margin: 8px 12px !important;
       border-width: 8px !important;
       padding: 12px !important;
@@ -200,39 +259,39 @@ a:hover {
 
   blockquote span {
       width: 15% !important;
-      font-size: 16px !important;
   }
 
   blockquote div {
     width: 85% !important;
-    font-size: 15px !important;
   }
 
   a {
     margin: 12px !important;
-    font-size: 15px !important;
   }
 
 }
 
 @media screen and (max-width: 600px) {
 
+  html {
+    font-size: 14px !important;
+  }
+
   h1 {
-    font-size: 20px !important;
     padding: 8px 12px !important;
     margin: 18px 6px !important;
     border-width: 6px !important;
+    font-size: 1.5rem;
   }
 
   p {
-      width: calc(100% - 16px) !important;
+      width: 100% !important;
       margin: 6px 0 !important;
       padding: 8px !important;
-      font-size: 16px !important;
   }
 
   blockquote {
-      width: calc(100% - 56px) !important;
+      width: calc(100% - 24px) !important;
       margin: 6px 12px !important;
       border-width: 8px !important;
       padding: 12px !important;
@@ -240,18 +299,15 @@ a:hover {
 
   blockquote span {
       width: 35% !important;
-      font-size: 15px !important;
   }
 
   blockquote div {
     width: 65% !important;
-    font-size: 14px !important;
     text-align: right !important;
   }
 
   a {
     margin: 12px !important;
-    font-size: 14px !important;
   }
 
 }

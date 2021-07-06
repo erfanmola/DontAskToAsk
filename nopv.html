@@ -32,7 +32,7 @@
         <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <meta name="google-site-verification" content="p6QU87bs_0d2k59-UOiWqrNEb81WBkex8lE_EjXmgvQ" />
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/app.css?ver=1.0.1">
         <style>
             h1 {
                 border-right-color: #FFE082;
@@ -48,6 +48,105 @@
         <div class="holder">
 
             <h1 class="semi-black no-select">پی‌وی جای سوال نیست !</h1>
+
+            <i class="toggle-mode icon-sun"></i>
+
+            <script>
+                !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e=e||self,function(){var r=e.Cookies,n=e.Cookies=t();n.noConflict=function(){return e.Cookies=r,n}}())}(this,function(){"use strict";function e(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)e[n]=r[n]}return e}var t={read:function(e){return e.replace(/%3B/g,";")},write:function(e){return e.replace(/;/g,"%3B")}};return function r(n,i){function o(r,o,u){if("undefined"!=typeof document){"number"==typeof(u=e({},i,u)).expires&&(u.expires=new Date(Date.now()+864e5*u.expires)),u.expires&&(u.expires=u.expires.toUTCString()),r=t.write(r).replace(/=/g,"%3D"),o=n.write(String(o),r);var c="";for(var f in u)u[f]&&(c+="; "+f,!0!==u[f]&&(c+="="+u[f].split(";")[0]));return document.cookie=r+"="+o+c}}return Object.create({set:o,get:function(e){if("undefined"!=typeof document&&(!arguments.length||e)){for(var r=document.cookie?document.cookie.split("; "):[],i={},o=0;o<r.length;o++){var u=r[o].split("="),c=u.slice(1).join("="),f=t.read(u[0]).replace(/%3D/g,"=");if(i[f]=n.read(c,f),e===f)break}return e?i[e]:i}},remove:function(t,r){o(t,"",e({},r,{expires:-1}))},withAttributes:function(t){return r(this.converter,e({},this.attributes,t))},withConverter:function(t){return r(e({},this.converter,t),this.attributes)}},{attributes:{value:Object.freeze(i)},converter:{value:Object.freeze(n)}})}(t,{path:"/"})});
+
+                var _Cookies$get;
+
+                let Mode = (_Cookies$get = Cookies.get('dontasktoask-mode')) !== null && _Cookies$get !== void 0 ? _Cookies$get : 'light';
+
+                let mode_icon = document.querySelector('.toggle-mode');
+                
+                document.querySelector(".toggle-mode").addEventListener('click', function () {
+                    setMode(Mode, true);
+                });
+
+                const setMode = (Mode, Notify, Reverse = false) => {
+                    Notify = Notify || true;
+
+                    if (Reverse) {
+
+                    switch (Mode) {
+                        case "light" :
+                            setLightMode();
+                            if (Notify) {
+                                NotifyMode('light');
+                            }
+                            break;
+                        case "dark" :
+                            setDarkMode();
+                            if (Notify) {
+                                NotifyMode('dark');
+                            }
+                            break
+                    }
+
+                    }else{
+
+                    switch (Mode) {
+                        case "light" :
+                            setDarkMode();
+                            if (Notify) {
+                                NotifyMode('dark');
+                            }
+                            break;
+                        case "dark" :
+                            setLightMode();
+                            if (Notify) {
+                                NotifyMode('light');
+                            }
+                            break
+                    }
+
+                    }
+                    
+                };
+
+                const setDarkMode = () => {
+                    document.body.classList.add('dark');
+                    mode_icon.classList.remove('icon-moon');
+                    mode_icon.classList.add('icon-sun');
+                    Mode = 'dark';
+                    document.cookie = "dontasktoask-mode=" + Mode + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;";
+                    document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffb300");
+                    document.querySelector("meta[name=msapplication-TileColor]").setAttribute("content", "#ffb300");
+                };
+
+                const setLightMode = () => {
+                    document.body.classList.remove('dark');
+                    mode_icon.classList.remove('icon-sun');
+                    mode_icon.classList.add('icon-moon');
+                    Mode = 'light';
+                    document.cookie = "dontasktoask-mode=" + Mode + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;";
+                    document.querySelector("meta[name=theme-color]").setAttribute("content", "#D81B60");
+                    document.querySelector("meta[name=msapplication-TileColor]").setAttribute("content", "#D81B60");
+                };
+
+                window.addEventListener("storage", ReceiveMode);
+
+                function NotifyMode(message) {
+                    localStorage.setItem('message',JSON.stringify(message));
+                }
+
+                function ReceiveMode(ev) {
+                    if (ev.key === 'message') {
+                        let message = JSON.parse(ev.newValue);
+                        switch (message) {
+                            case "dark" :
+                                setDarkMode();
+                                break;
+                            case "light" :
+                                setLightMode();
+                                break;
+                        }
+                    }
+                }
+
+                setMode(Mode, true, true);
+            </script>
 
             <p class="normal">یکی از مشکلات رایجی که اکثرا باهاش مواجه میشیم اینه که صبح بیدار میشیم و میریم سر گوشی برای چک کردن شبکه های اجتماعی (تلگرام، ایمیل، مسیج و ...) و پیام هایی که اکثرا مواجه میشیم با این مضامین شروع میشه :</p>
 
