@@ -28,9 +28,9 @@
         <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
         <link rel="manifest" href="manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileColor" content="#0288D1">
         <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#0288D1">
         <meta name="google-site-verification" content="p6QU87bs_0d2k59-UOiWqrNEb81WBkex8lE_EjXmgvQ" />
         <link rel="stylesheet" href="css/app.css?ver=1.0.1">
         <style>
@@ -111,8 +111,6 @@
                     mode_icon.classList.add('icon-sun');
                     Mode = 'dark';
                     document.cookie = "dontasktoask-mode=" + Mode + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;";
-                    document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffb300");
-                    document.querySelector("meta[name=msapplication-TileColor]").setAttribute("content", "#ffb300");
                 };
 
                 const setLightMode = () => {
@@ -121,8 +119,6 @@
                     mode_icon.classList.add('icon-moon');
                     Mode = 'light';
                     document.cookie = "dontasktoask-mode=" + Mode + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;";
-                    document.querySelector("meta[name=theme-color]").setAttribute("content", "#D81B60");
-                    document.querySelector("meta[name=msapplication-TileColor]").setAttribute("content", "#D81B60");
                 };
 
                 window.addEventListener("storage", ReceiveMode);
