@@ -1,0 +1,49 @@
+.clearFix {
+  clear: both;
+}
+#footer {
+  padding: 10px;
+  height: 100%;
+  /* background: rgba(255, 255, 255, 0.36);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1); */
+}
+#footer .right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+#footer .related-pages a {
+  margin-left: 50px;
+  font-size: 0.95rem;
+  display: inline-block;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  /* background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
+}
+#footer .related-pages a:hover {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+#footer .logos {
+  position: absolute;
+  bottom: 0;
+}
+
+#footer .left {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
