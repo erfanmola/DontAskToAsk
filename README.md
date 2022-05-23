@@ -10,10 +10,10 @@
 
 <h3 style="text-align: right;direction: rtl;" dir="rtl">🔰 بخش های مختلف پروژه</h3>
 <ul dir="rtl">
-    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/">💠 نپرس که بپرسم، فقط بپرس !</a></li>
+    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/">💠 نپرس که بپرسم، فقط بپرس</a></li>
     <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/xy">💠 مسئله فلان و بهمان (XY)</a></li>
-    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nopv">💠 پی‌وی جای سوال نیست</a></li>
-    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nohello">💠 سلام، بی‌سلام !</a></li>
+    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nopv">💠 خصوصی سوال نکنید</a></li>
+    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nohello">💠 سلام، بی‌سلام</a></li>
 </ul>
 
 <br>
