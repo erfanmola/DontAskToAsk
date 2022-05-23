@@ -1,8 +1,8 @@
 <div style="text-align: center;padding: 0;margin: 0;">
-    <img src="https://dontasktoask.ir/DontAskToAsk.png" alt="نپرس که بپرسم، فقط بپرس !" style="width: 100%;">
+    <img src="https://dontasktoask.ir/DontAskToAsk.png" alt="نپرس که بپرسم، فقط بپرس" style="width: 100%;">
 </div>
 
-<h1 style="text-align: right;direction: rtl;" dir="rtl">⭕️ نپرس که بپرسم، فقط بپرس !</h1>
+<h1 style="text-align: right;direction: rtl;" dir="rtl">⭕️ نپرس که بپرسم، فقط بپرس</h1>
 
 <p style="text-align: right;direction: rtl;" dir="rtl">پروژه نپرس که بپرسم، با هدف ارائه راهکار هایی برای پرسش بهتر مسائل ایجاد شده که با ارائه راهنمایی های لازم برای پرسش بهتر، دریافت پاسخ های بهتر و اصولی‌تری را میسر می‌کند و در سطوح بعدی، باعث کم‌تر شدن اتلاف وقت می‌شود</p>
 
