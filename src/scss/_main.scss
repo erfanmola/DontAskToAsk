@@ -1,0 +1,221 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+* {
+    font-family: "VazirmatnVariable", Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+body {
+    font-family: "VazirmatnVariable", Arial, Helvetica, sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+    line-height: 2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--bg-color);
+    color: var(--text-color);
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar);
+    outline: none;
+    border-radius: 1000px;
+    overflow: hidden;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.no-select {
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   pointer-events: none;
+}  
+
+.holder {
+    margin: auto;
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 24px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    cursor: pointer;
+}
+
+.section-main > div {
+    
+    > p {
+        display: block;
+        text-align: justify;
+        padding: 24px 0;
+        line-height: 2.5;
+        font-size: 1.075rem;
+        font-variation-settings: "wght" 500;
+    }
+
+    .scenario {
+        display: block;
+        padding: 24px;
+        border-radius: 12px;
+        margin: 12px 0;
+        border: 2px solid;
+
+        > h2 {
+            display: flex;
+            font-variation-settings: "wght" 500;
+            user-select: none;
+            font-size: 1.325rem;
+            justify-content: flex-start;
+            align-items: center;
+
+            > i {
+                padding-left: 8px;
+                font-size: 1.625rem;
+            }
+        }
+
+        &.scenario-wrong {
+            background: var(--scenario-wrong);
+            border-color: var(--border-wrong);
+
+            h2 {
+                color: var(--h2-wrong);
+            }
+
+            hr {
+                background-image: var(--hr-wrong);
+            }
+        }
+
+        &.scenario-correct {
+            background: var(--scenario-correct);
+            border-color: var(--border-correct);
+            
+            h2 {
+                color: var(--h2-correct);
+            }
+
+            hr {
+                background-image: var(--hr-correct);
+            }
+        }
+    }
+
+}
+
+hr {
+    display: block;
+    margin: 24px 0;
+    border: 0;
+    height: 2px;
+    background-image: var(--hr);
+}
+
+.shimmer {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--shimmer-static-bg);
+  
+    &::after {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-image: linear-gradient(
+                      90deg,
+                      rgba(#fff, 0) 0,
+                      rgba(#fff, 0.2) 20%,
+                      rgba(#fff, 0.5) 60%,
+                      rgba(#fff, 0)
+      );
+      animation: shimmer 2s infinite;
+      content: '';
+    }
+}
+  
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.DPXGithubRatingButton {
+    position: fixed;
+    background: var(--dpxgithubrating-bg);
+    color: var(--dpxgithubrating-color);
+    border: 1px solid var(--dpxgithubrating-border);
+    box-shadow: var(--dpxgithubrating-shadow);
+    left: 32px;
+    bottom: 32px;
+    line-height: normal;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    transition: opacity .15s;
+    
+    span, i, b {
+        display: flex;
+        align-items: center;
+    }
+
+    b {
+        padding: 2px 6px;
+        border-right: 2px solid var(--dpxgithubrating-border);
+    }
+
+    i {
+        padding: 0 6px 0 0;
+    }
+
+    span {
+        padding: 0 6px;
+    }
+
+    &:hover {
+        opacity: 0.75;
+    }
+}

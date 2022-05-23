@@ -1,0 +1,45 @@
+:root {
+    color-scheme: light dark;
+    --bg-color: #ffffff;
+    --text-color: #202530;
+    --color: #202530;
+    --scrollbar: darkgrey;
+    --scenario-wrong: rgba(244, 67, 54, 0.0625);
+    --scenario-correct: rgba(76, 175, 80, 0.0625);
+    --hr: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+    --hr-wrong: linear-gradient(to right, rgba(183, 28, 28, 0), rgba(183, 28, 28, 0.25), rgba(183, 28, 28, 0));
+    --hr-correct: linear-gradient(to right, rgb(27, 94, 32, 0), rgb(27, 94, 32, 0.25), rgb(27, 94, 32, 0));
+    --h2-wrong: #B71C1C;
+    --h2-correct: #1B5E20;
+    --border-wrong: rgba(255, 205, 210, 0.625);
+    --border-correct: rgba(200, 230, 201, 0.625);
+    --shimmer-static-bg: #DDDBDD;
+    --bubble-right: #248bf5;
+    --bubble-right-color: white;
+    --bubble-left: #e5e5ea;
+    --bubble-left-color: #000000;
+    --dpxgithubrating-bg: #f6f8fa;
+    --dpxgithubrating-color: #24292f;
+    --dpxgithubrating-border: #d5d8da;
+    --dpxgithubrating-shadow: rgba(27,31,36,0.15), 0 1px 0 rgba(27,31,36,0.04), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+body.dark {
+    --scrollbar: #455055;
+    --bg-color: #353535;
+    --text-color: #f0f0f0;
+    --color: #f0f0f0;
+    --hr: linear-gradient(to right, rgba(255,255,255, 0), rgba(255,255,255, 0.25), rgba(255,255,255, 0));
+    --hr-wrong: linear-gradient(to right, rgba(255, 205, 210, 0.125), rgba(255, 205, 210, 0.75), rgba(255, 205, 210, 0.125));
+    --hr-correct: linear-gradient(to right, rgb(200, 230, 201, 0.125), rgb(200, 230, 201, 0.75), rgb(200, 230, 201, 0.125));
+    --h2-wrong: #E57373;
+    --h2-correct: #81C784;
+    --shimmer-static-bg: #253035;
+    --bubble-right: #2196F3;
+    --bubble-right-color: white;
+    --bubble-left: #616161;
+    --bubble-left-color: e5e5ea;
+    --dpxgithubrating-bg: #303530;
+    --dpxgithubrating-color: #f6f8fa;
+    --dpxgithubrating-border: #656565;
+}

@@ -1,0 +1,118 @@
+@media only screen and (max-width: 960px) {
+
+    html {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    html {
+        font-size: 14px;
+    }
+
+    header#header {
+        padding: 18px 0;
+
+        > div {
+
+            a {
+                h1 {
+                    font-size: 1.325rem;
+                }
+            }
+        }
+    }
+
+    .section-main > div {
+    
+        > p {
+            padding: 16px 0;
+            font-size: 1rem;
+        }
+    
+        .scenario {
+            padding: 16px;
+            margin: 8px 0;
+    
+            > h2 {
+                font-size: 1.125rem;
+            }
+        }
+    
+    }
+
+    section.section-footer {
+
+        > header {
+            padding: 8px 0;
+
+            > h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        > ul {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 16px;
+            padding: 8px 0;
+
+            li {
+
+                > a {
+                    padding: 64px 12px;
+                    font-size: 1.125rem;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+    article.speech-bubble {
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+        padding: 8px 0;
+
+        > div:first-of-type {
+            
+            > p {
+                padding: 16px;
+                font-size: 0.925rem;
+            }
+
+        }
+    }
+
+    hr {
+        margin: 12px 0;
+    }
+
+    .DPXGithubRatingButton {
+        left: 16px;
+        grid-template-areas: "count count"
+                             "star text";
+        border-radius: 8px;
+
+        b {
+            grid-area: count;
+            border-right: none;
+            text-align: center;
+            justify-content: center;
+            padding: 4px 0 0;
+            border-bottom: 2px solid var(--dpxgithubrating-border);
+        }
+
+        span {
+            grid-area: text;
+            padding: 0 0 4px 4px;
+        }
+
+        i {
+            grid-area: star;
+            padding: 0 4px 4px;
+        }
+    }
+
+}
