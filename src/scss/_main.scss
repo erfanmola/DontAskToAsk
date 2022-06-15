@@ -154,6 +154,8 @@ hr {
     position: relative;
     overflow: hidden;
     background-color: var(--shimmer-static-bg);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    isolation: isolate;
   
     &::after {
       z-index: 0;
