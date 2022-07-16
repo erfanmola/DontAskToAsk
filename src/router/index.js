@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import XYView from '../views/XYView.vue'
 import NoHelloView from '../views/NoHelloView.vue'
 import NoPvView from '../views/NoPvView.vue'
+import NoCodeView from '../views/NoCodeView.vue'
 
 const routes = [
     {
@@ -43,6 +44,16 @@ const routes = [
         meta: { 
             title: 'خصوصی سوال نکنید',
             accent: '#FF9800',
+            gradient: 'linear-gradient(215deg, #FFCC80 0%, #E65100 100%)',
+        }
+    },
+    {
+        path: '/nocode',
+        name: 'nocode',
+        component: NoCodeView,
+        meta: { 
+            title: 'کدت رو بذار!',
+            accent: '#00c72b', 
             gradient: 'linear-gradient(215deg, #FFCC80 0%, #E65100 100%)',
         }
     },
