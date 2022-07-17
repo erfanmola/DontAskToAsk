@@ -52,7 +52,7 @@ const routes = [
         name: 'nocode',
         component: NoCodeView,
         meta: { 
-            title: 'کدت رو بذار!',
+            title: 'کُدِت رو بذار!',
             accent: '#009f7b', 
             gradient: 'linear-gradient(45deg, hsla(190,100%,28.4%,1) 0%, hsla(162,100%,73.5%,1) 100%);',
         }
