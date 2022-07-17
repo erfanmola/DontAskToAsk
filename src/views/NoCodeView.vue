@@ -103,7 +103,7 @@
 import SpeechBubble from '../components/SpeechBubble.vue'
 
 export default {
-    name: 'HomeView',
+    name: 'NoCodeView',
     components: {
         SpeechBubble,
     },
