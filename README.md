@@ -24,6 +24,7 @@
 <ul dir="rtl">
     <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.com/">💠 DontAskToAsk.com</a></li>
     <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://xyproblem.info/">💠 XYProblem.info</a></li>
+    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://idownvotedbecau.se/nocode/">💠 idownvotedbecau.se/nocode</a></li>
 </ul>
 
 <br>
