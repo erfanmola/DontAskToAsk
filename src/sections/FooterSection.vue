@@ -27,12 +27,7 @@
             </header>
 
             <ul v-if="DevelopixProjectsList === null" id="shimmer-developix-projects-list">
-                <li class="shimmer"></li>
-                <li class="shimmer"></li>
-                <li class="shimmer"></li>
-                <li class="shimmer"></li>
-                <li class="shimmer"></li>
-                <li class="shimmer"></li>
+                <li class="shimmer" v-for="i in 6"></li>
             </ul>
 
             <ul v-else>
