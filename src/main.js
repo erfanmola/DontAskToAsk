@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './scss/app.scss'
-import './registerServiceWorker'
 import VueGtag from "vue-gtag";
 
 const app = createApp(App);
