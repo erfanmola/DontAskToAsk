@@ -1,5 +1,5 @@
 <div style="text-align: center;padding: 0;margin: 0;">
-    <img src="https://dontasktoask.ir/DontAskToAsk.png" alt="نپرس که بپرسم، فقط بپرس" style="width: 100%;">
+    <img src="https://raw.githubusercontent.com/erfanmola/DontAskToAsk/master/public/DontAskToAsk.png" alt="نپرس که بپرسم، فقط بپرس" style="width: 100%;">
 </div>
 
 <h1 style="text-align: right;direction: rtl;" dir="rtl">⭕️ نپرس که بپرسم، فقط بپرس</h1>
