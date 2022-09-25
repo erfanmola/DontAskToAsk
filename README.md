@@ -14,7 +14,7 @@
     <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/xy">💠 مسئله فلان و بهمان (XY)</a></li>
     <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nopv">💠 خصوصی سوال نکنید</a></li>
     <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nohello">💠 سلام، بی‌سلام</a></li>
-    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nocode">💠 کُدِت رو بزار</a></li>
+    <li dir="rtl" style="text-align: right;direction: rtl;"><a dir="rtl" target="_blank" href="https://dontasktoask.ir/nocode">💠 کُدِت رو بذار</a></li>
 </ul>
 
 
@@ -30,4 +30,4 @@
 <br>
 
 <h3 dir="rtl" style="text-align: right;direction: rtl;">🤝 مشارکت</h3>
-<p dir="rtl" style="text-align: right;direction: rtl;">این پروژه تحت پروانه GPL نسخه 3 منتشر و نگه‌داری می‌شود و از این‌جهت، هرکسی می‌تواند در صورت نیاز اقدام به مشارکت برای اصلاح یا بهبود یا حتی اضافه کردن ویژگی های جدید به این پروژه کند، همچنین ایجاد فورک های مختلف از پروژه و توسعه پروژه در شاخه‌ای جدا، چه به‌صورت رایگان و چه به‌صورت تجاری، هیچگونه مانعی ندارد</p>
+<p dir="rtl" style="text-align: right;direction: rtl;">این پروژه تحت پروانه AGPL نسخه 3 منتشر و نگه‌داری می‌شود و از این‌جهت، هرکسی می‌تواند در صورت نیاز اقدام به مشارکت برای اصلاح یا بهبود یا حتی اضافه کردن ویژگی های جدید به این پروژه کند، همچنین ایجاد فورک های مختلف از پروژه و توسعه پروژه در شاخه‌ای جدا، چه به‌صورت رایگان و چه به‌صورت تجاری، هیچگونه مانعی ندارد</p>
