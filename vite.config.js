@@ -32,6 +32,12 @@ export default defineConfig({
         }),
     ],
     build: {
-        outDir: './docs'
+        outDir: './docs',
+        rollupOptions: {
+            input: {
+                main: './index.html',
+                404: './404.html'
+            }
+        }
     }
 });
