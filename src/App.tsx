@@ -456,8 +456,9 @@ export function App(props: { route: Route; copy: Translation }) {
 											ref={template}
 											aria-label={t().templateTitle}
 											rows="7"
-											value={data().template}
-										/>
+										>
+											{data().template}
+										</textarea>
 										<button
 											type="button"
 											class="dt-quiet"
