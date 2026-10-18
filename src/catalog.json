@@ -1,0 +1,150 @@
+{
+	"guides": [
+		{
+			"id": "ask",
+			"path": "/",
+			"group": "ask",
+			"icon": "message-circle-question"
+		},
+		{
+			"id": "hello",
+			"path": "/nohello",
+			"group": "ask",
+			"icon": "hand"
+		},
+		{
+			"id": "xy",
+			"path": "/xy",
+			"group": "ask",
+			"icon": "route"
+		},
+		{
+			"id": "pv",
+			"path": "/nopv",
+			"group": "ask",
+			"icon": "messages-square"
+		},
+		{
+			"id": "code",
+			"path": "/nocode",
+			"group": "ask",
+			"icon": "square-code"
+		},
+		{
+			"id": "bestlanguage",
+			"path": "/best-language",
+			"group": "learn",
+			"icon": "braces"
+		},
+		{
+			"id": "bugreport",
+			"path": "/bug-report",
+			"group": "ask",
+			"icon": "bug"
+		},
+		{
+			"id": "followup",
+			"path": "/follow-up",
+			"group": "respond",
+			"icon": "message-circle-check"
+		},
+		{
+			"id": "answer",
+			"path": "/answer",
+			"group": "respond",
+			"icon": "heart-handshake"
+		},
+		{
+			"id": "aihelp",
+			"path": "/ai-help",
+			"group": "learn",
+			"icon": "bot"
+		}
+	],
+	"projects": [
+		{
+			"id": "ronio",
+			"url": "https://ronio.ir",
+			"enUrl": "https://ronio.ir/en",
+			"source": "https://github.com/erfanmola/Ronio/blob/master/frontend/src/views/HomeView.tsx",
+			"icon": "palette"
+		},
+		{
+			"id": "smusher",
+			"url": "https://smusher.ir",
+			"enUrl": "https://smusher.ir/en",
+			"source": "https://github.com/erfanmola/Smusher/blob/master/frontend/src/about-en.tsx",
+			"icon": "image-down"
+		},
+		{
+			"id": "filito",
+			"url": "https://filito.ir",
+			"enUrl": "https://filito.ir/en",
+			"source": "https://github.com/erfanmola/Filito/blob/master/frontend/index.html",
+			"icon": "send"
+		},
+		{
+			"id": "htmhell",
+			"url": "https://htmhell.ir",
+			"source": "https://htmhell.ir",
+			"icon": "flame"
+		},
+		{
+			"id": "nojquery",
+			"url": "https://nojquery.ir",
+			"source": "https://github.com/erfanmola/NoJQuery#readme",
+			"icon": "file-code-2"
+		},
+		{
+			"id": "theperfectsite",
+			"url": "https://theperfectsite.ir",
+			"source": "https://github.com/erfanmola/ThePerfectSite/blob/master/index.html",
+			"icon": "feather"
+		},
+		{
+			"id": "thebestlanguage",
+			"url": "https://thebestlanguage.ir",
+			"source": "https://github.com/erfanmola/TheBestLanguage/blob/master/src/views/HomeView.vue",
+			"icon": "braces"
+		},
+		{
+			"id": "pixoro",
+			"url": "https://pixoro.ir",
+			"enUrl": "https://pixoro.ir/en",
+			"source": "https://github.com/erfanmola/Pixoro/blob/master/website/src/DPXLanguage.js",
+			"icon": "images"
+		},
+		{
+			"id": "urixo",
+			"url": "https://urixo.ir",
+			"source": "https://github.com/erfanmola/Urixo/blob/master/website/src/sections/Header.vue",
+			"icon": "messages-square"
+		},
+		{
+			"id": "qiblafind",
+			"url": "https://qiblafind.net/fa",
+			"enUrl": "https://qiblafind.net",
+			"source": "https://qiblafind.net",
+			"icon": "navigation"
+		},
+		{
+			"id": "onlinecompass",
+			"url": "https://onlinecompass.lol/",
+			"source": "https://github.com/erfanmola/OnlineCompass#readme",
+			"icon": "compass"
+		},
+		{
+			"id": "twitterdownloader",
+			"url": "https://twitterdownloader.lol/fa",
+			"enUrl": "https://twitterdownloader.lol/",
+			"source": "https://qiblafind.net",
+			"icon": "download"
+		},
+		{
+			"id": "developix",
+			"url": "https://developix.ir",
+			"source": "https://developix-ir.github.io/Developix/DevelopixProjects.json",
+			"icon": "layout-grid"
+		}
+	]
+}
