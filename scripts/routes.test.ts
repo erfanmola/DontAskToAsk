@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+	guideDestination,
 	guides,
 	type Locale,
 	locales,
@@ -40,5 +41,36 @@ describe("public URL compatibility", () => {
 		expect(parseRoute("/xy/")).toEqual({ locale: "fa", guide: "xy" });
 		expect(parseRoute("/en/")).toEqual({ locale: "en", guide: "ask" });
 		expect(parseRoute("/constructor/").guide).toBeNull();
+	});
+});
+
+describe("instant guide navigation", () => {
+	test("all guide and language destinations are recognized", () => {
+		for (const locale of Object.keys(locales) as Locale[])
+			for (const guide of guides) {
+				const href = routePath(locale, guide.id);
+				expect(
+					guideDestination(href, "https://dontasktoask.ir/404")?.pathname,
+				).toBe(href);
+			}
+	});
+	test("external sites, files, unknown routes, and same-page fragments retain native behavior", () => {
+		for (const href of [
+			"https://example.com/en",
+			"/cover-en.png",
+			"/en/missing",
+			"/en#main",
+			"#main",
+			"mailto:hello@example.com",
+		])
+			expect(guideDestination(href, "https://dontasktoask.ir/en")).toBeNull();
+	});
+	test("legacy aliases keep queries and fragments when canonicalized", () => {
+		expect(
+			guideDestination(
+				"/en/xyproblem?utm_source=guide#main",
+				"https://dontasktoask.ir/",
+			)?.href,
+		).toBe("https://dontasktoask.ir/en/xy?utm_source=guide#main");
 	});
 });
