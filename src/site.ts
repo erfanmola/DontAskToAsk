@@ -55,3 +55,15 @@ export function parseRoute(pathname: string): Route {
 		return { locale, guide, redirect: routePath(locale, guide) };
 	return { locale, guide };
 }
+
+export function guideDestination(href: string, current: string): URL | null {
+	const url = new URL(href, current);
+	const from = new URL(current);
+	if (url.origin !== from.origin) return null;
+	if (url.pathname === from.pathname && url.search === from.search && url.hash)
+		return null;
+	const route = parseRoute(url.pathname);
+	if (!route.guide) return null;
+	if (route.redirect) url.pathname = route.redirect;
+	return url;
+}

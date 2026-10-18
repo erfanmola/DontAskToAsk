@@ -54,7 +54,7 @@ body {
 }
 #site {
 	border-radius: 0;
-	max-width: 1200px;
+	width: 100%;
 	margin-inline: auto;
 	min-height: 100vh;
 }
@@ -62,13 +62,13 @@ body {
 #site {
 	color-scheme: inherit;
 	font:
-		15px / 1.9 "Manrope Variable",
+		17px / 1.9 "Manrope Variable",
 		"Vazirmatn Variable",
 		sans-serif;
 	color: var(--dt-ink);
 	background: var(--dt-bg);
 	text-align: start;
-	border-radius: 16px;
+	border-radius: 0;
 	overflow: clip;
 	isolation: isolate;
 }
@@ -121,6 +121,8 @@ body {
 	flex-shrink: 0;
 }
 #site .dt-top {
+	max-width: 1120px;
+	margin-inline: auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -134,7 +136,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	font-size: 17px;
+	font-size: 20px;
 	font-weight: 800;
 	white-space: nowrap;
 }
@@ -165,12 +167,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 7px;
-	min-height: 36px;
+	min-height: 44px;
 	border: 1px solid var(--dt-line);
 	background: var(--dt-paper);
 	border-radius: 8px;
 	padding: 4px 10px;
-	font-size: 12px;
+	font-size: 14px;
 	white-space: nowrap;
 }
 #site .dt-theme {
@@ -192,6 +194,8 @@ body {
 	padding-inline-start: 9px;
 }
 #site .dt-shell {
+	max-width: 1120px;
+	margin-inline: auto;
 	display: grid;
 	grid-template-columns: 184px minmax(0, 1fr);
 	gap: 40px;
@@ -202,7 +206,7 @@ body {
 	padding-block: 7px;
 }
 #site .dt-sidebar-title {
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--dt-muted);
 	padding: 0 12px 12px;
 }
@@ -220,7 +224,7 @@ body {
 	line-height: 1.7;
 	padding: 11px 12px;
 	border-radius: 9px;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	min-height: 43px;
 }
@@ -240,7 +244,7 @@ body {
 	margin: 28px 12px 0;
 	padding-top: 20px;
 	border-top: 1px solid var(--dt-line);
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--dt-muted);
 	line-height: 1.9;
 }
@@ -257,7 +261,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	font-size: 11px;
+	font-size: 13px;
 	color: var(--dt-muted);
 	margin-bottom: 18px;
 }
@@ -266,7 +270,7 @@ body {
 	height: 13px;
 }
 #site .dt-hero h1 {
-	font-size: clamp(32px, 4.5vw, 49px);
+	font-size: clamp(38px, 4.5vw, 54px);
 	font-weight: 800;
 	line-height: 1.5;
 	letter-spacing: -1.4px;
@@ -279,7 +283,7 @@ body {
 	max-width: 580px;
 }
 #site .dt-deck {
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 2.05;
 	color: var(--dt-muted);
 	max-width: 600px;
@@ -300,9 +304,9 @@ body {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
-	min-height: 40px;
+	min-height: 44px;
 	padding: 8px 15px;
 }
 #site[data-theme="dark"] .dt-primary {
@@ -313,7 +317,7 @@ body {
 	height: 16px;
 }
 #site .dt-minute {
-	font-size: 11px;
+	font-size: 13px;
 	color: var(--dt-muted);
 }
 #site .dt-comparison {
@@ -337,7 +341,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 7px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	margin-bottom: 18px;
 	color: var(--dt-bad);
@@ -354,7 +358,7 @@ body {
 	align-items: center;
 	gap: 7px;
 	color: var(--dt-muted);
-	font-size: 10px;
+	font-size: 12px;
 	margin-bottom: 7px;
 }
 #site .dt-avatar {
@@ -365,15 +369,15 @@ body {
 	place-items: center;
 	background: var(--dt-accent-bg);
 	color: var(--dt-accent);
-	font-size: 11px;
+	font-size: 13px;
 }
 #site .dt-person time {
 	margin-inline-start: auto;
-	font-size: 10px;
+	font-size: 12px;
 	direction: ltr;
 }
 #site .dt-bubble {
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 1.95;
 	padding: 12px 13px;
 	background: var(--dt-bg);
@@ -396,7 +400,7 @@ body {
 	background: var(--dt-good-bg);
 }
 #site .dt-chat-result {
-	font-size: 11px;
+	font-size: 13px;
 	line-height: 1.8;
 	color: var(--dt-muted);
 	margin-top: 15px;
@@ -415,13 +419,13 @@ body {
 	margin-top: 32px;
 }
 #site .dt-body h2 {
-	font-size: 20px;
+	font-size: 23px;
 	font-weight: 700;
 	line-height: 1.6;
 	margin-bottom: 10px;
 }
 #site .dt-body > p {
-	font-size: 14px;
+	font-size: 17px;
 	line-height: 2.05;
 	color: var(--dt-muted);
 	margin-bottom: 13px;
@@ -431,7 +435,7 @@ body {
 	border-inline-start: 3px solid var(--dt-accent);
 	padding: 3px 16px;
 	margin-top: 21px;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 2;
 }
 #site .dt-checklist {
@@ -450,12 +454,12 @@ body {
 	margin-bottom: 13px;
 }
 #site .dt-section-heading h2 {
-	font-size: 16px;
+	font-size: 19px;
 	font-weight: 700;
 	line-height: 1.6;
 }
 #site .dt-count {
-	font-size: 11px;
+	font-size: 13px;
 	color: var(--dt-muted);
 	font-variant-numeric: tabular-nums;
 }
@@ -468,7 +472,7 @@ body {
 	display: flex;
 	gap: 8px;
 	align-items: flex-start;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.8;
 	cursor: var(--cursor-interaction, pointer);
 }
@@ -484,7 +488,7 @@ body {
 	margin-top: 14px;
 }
 #site .dt-template summary {
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--dt-accent);
 	font-weight: 600;
 	cursor: var(--cursor-interaction, pointer);
@@ -492,7 +496,7 @@ body {
 }
 #site .dt-template textarea {
 	font:
-		12px / 2 "Vazirmatn Variable",
+		15px / 2 "Vazirmatn Variable",
 		"Manrope Variable",
 		sans-serif;
 	background: var(--dt-bg);
@@ -510,7 +514,7 @@ body {
 	padding: 12px;
 	border-radius: 8px;
 	background: var(--dt-accent-bg);
-	font-size: 12px;
+	font-size: 14px;
 }
 #site .dt-share-box input {
 	direction: ltr;
@@ -522,7 +526,7 @@ body {
 	border: 1px solid var(--dt-line);
 	border-radius: 5px;
 	background: var(--dt-paper);
-	font-size: 12px;
+	font-size: 14px;
 }
 #site .dt-next {
 	display: flex;
@@ -538,7 +542,7 @@ body {
 	background: none;
 	padding: 0;
 	color: var(--dt-accent);
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	text-align: start;
 	display: flex;
@@ -546,7 +550,7 @@ body {
 	align-items: center;
 }
 #site .dt-next > span {
-	font-size: 11px;
+	font-size: 13px;
 	color: var(--dt-muted);
 }
 #site .dt-projects {
@@ -556,7 +560,7 @@ body {
 	margin-bottom: 5px;
 }
 #site .dt-projects .dt-intro {
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--dt-muted);
 	margin-bottom: 15px;
 }
@@ -590,18 +594,18 @@ body {
 	color: var(--dt-accent);
 }
 #site .dt-project h3 {
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 700;
 	line-height: 1.7;
 }
 #site .dt-project p {
-	font-size: 11px;
+	font-size: 14px;
 	color: var(--dt-muted);
 	line-height: 1.9;
 	margin-top: 3px;
 }
 #site .dt-project small {
-	font-size: 10px;
+	font-size: 12px;
 	color: var(--dt-muted);
 	display: block;
 	margin-top: 5px;
@@ -613,19 +617,23 @@ body {
 	border: 0;
 	background: none;
 	color: var(--dt-accent);
-	font-size: 11px;
+	font-size: 13px;
 	padding: 4px 0;
 }
+#site .site-footer {
+	background: var(--dt-paper);
+	border-top: 1px solid var(--dt-line);
+}
 #site .dt-footer {
+	max-width: 1120px;
+	margin-inline: auto;
+	padding: 24px 32px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 14px;
 	flex-wrap: wrap;
-	border-top: 1px solid var(--dt-line);
-	margin-top: 28px;
-	padding-top: 17px;
-	font-size: 10px;
+	font-size: 13px;
 	color: var(--dt-muted);
 }
 #site .dt-footer a {
@@ -643,7 +651,7 @@ body {
 	align-items: center;
 }
 #site .dt-star-note {
-	font-size: 10px;
+	font-size: 12px;
 	color: var(--dt-muted);
 	margin-top: 10px;
 }
@@ -661,11 +669,14 @@ body {
 		gap: 23px;
 		padding: 30px 23px;
 	}
+	#site .dt-footer {
+		padding-inline: 23px;
+	}
 	#site .dt-top {
 		padding: 20px 23px;
 	}
 	#site .dt-nav a {
-		font-size: 12px;
+		font-size: 15px;
 		padding: 10px 8px;
 	}
 	#site .dt-breadcrumb {
@@ -674,14 +685,14 @@ body {
 }
 @media (max-width: 620px) {
 	#site {
-		border-radius: 10px;
+		border-radius: 0;
 	}
 	#site .dt-top {
 		padding: 18px;
 		gap: 14px;
 	}
 	#site .dt-brand {
-		font-size: 15px;
+		font-size: 18px;
 	}
 	#site .dt-shell {
 		display: block;
@@ -702,7 +713,7 @@ body {
 		gap: 5px;
 	}
 	#site .dt-nav a {
-		font-size: 11px;
+		font-size: 13px;
 		min-height: 34px;
 		padding: 7px 9px;
 	}
@@ -710,10 +721,10 @@ body {
 		display: none;
 	}
 	#site .dt-hero h1 {
-		font-size: 36px;
+		font-size: 40px;
 	}
 	#site .dt-deck {
-		font-size: 14px;
+		font-size: 17px;
 	}
 	#site .dt-comparison {
 		gap: 12px;
@@ -747,7 +758,7 @@ body {
 		margin-inline-end: auto;
 	}
 	#site .dt-hero h1 {
-		font-size: 32px;
+		font-size: 38px;
 	}
 	#site .dt-footer-links {
 		gap: 12px;
@@ -763,11 +774,11 @@ html {
 	background: var(--dt-bg);
 }
 #site {
-	max-width: 1120px;
+	width: 100%;
 	border-radius: 0;
 }
 #site .dt-nav-group-title {
-	font-size: 11px;
+	font-size: 13px;
 	line-height: 1.5;
 	color: var(--dt-muted);
 	padding: 15px 12px 6px;
@@ -796,14 +807,14 @@ html {
 	border-bottom: 1px solid var(--dt-line);
 }
 #site .dt-mobile-controls .dt-quiet {
-	min-height: 40px;
+	min-height: 44px;
 }
 #site .dt-mobile-menu .dt-nav {
 	display: grid;
 	gap: 5px;
 }
 #site .dt-mobile-menu .dt-nav a {
-	font-size: 13px;
+	font-size: 15px;
 	min-height: 42px;
 	padding: 10px 12px;
 }
@@ -820,6 +831,9 @@ html {
 	}
 }
 @media (max-width: 700px) {
+	#site .dt-footer {
+		padding-inline: 20px;
+	}
 	#site .dt-top {
 		padding: 12px 18px;
 		min-height: 64px;
@@ -830,7 +844,7 @@ html {
 		display: none;
 	}
 	#site .dt-brand {
-		font-size: 16px;
+		font-size: 19px;
 		gap: 9px;
 	}
 	#site .dt-mark {
@@ -843,7 +857,7 @@ html {
 		align-items: center;
 		justify-content: center;
 		width: 40px;
-		min-height: 40px;
+		min-height: 44px;
 		padding: 8px;
 		border: 1px solid var(--dt-line);
 		border-radius: 8px;
@@ -862,15 +876,15 @@ html {
 		display: none;
 	}
 	#site .dt-hero h1 {
-		font-size: 35px;
+		font-size: 40px;
 		line-height: 1.5;
 	}
 	#site[dir="ltr"] .dt-hero h1 {
-		font-size: 35px;
+		font-size: 40px;
 		letter-spacing: -1.3px;
 	}
 	#site .dt-deck {
-		font-size: 14px;
+		font-size: 17px;
 		margin-top: 14px;
 	}
 	#site .dt-hero-actions {
@@ -883,7 +897,7 @@ html {
 		grid-template-columns: 1fr;
 	}
 	#site .dt-chat-label {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
@@ -950,7 +964,7 @@ html[data-theme="dark"] {
 	display: block;
 	padding: 7px 12px;
 	white-space: nowrap;
-	font-size: 13px;
+	font-size: 15px;
 	border-radius: 5px;
 }
 #site .language-options a[aria-current="true"] {
@@ -959,8 +973,8 @@ html[data-theme="dark"] {
 }
 #site .theme-toggle {
 	position: relative;
-	width: 38px;
-	height: 38px;
+	width: 44px;
+	height: 44px;
 	padding: 0;
 	flex-shrink: 0;
 }
@@ -1052,7 +1066,7 @@ html[data-theme="dark"] {
 	margin-top: 8px;
 }
 #site .copy-status {
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--dt-good);
 	min-height: 0;
 	margin-top: 6px;
@@ -1061,7 +1075,7 @@ html[data-theme="dark"] {
 	display: none;
 }
 #site .sources {
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--dt-muted);
 	margin-top: 24px;
 }
@@ -1111,8 +1125,8 @@ html[data-theme="dark"] {
 		top: 12px;
 		display: grid;
 		place-items: center;
-		width: 40px;
-		height: 40px;
+		width: 44px;
+		height: 44px;
 		border: 1px solid var(--dt-line);
 		border-radius: 8px;
 		cursor: pointer;
@@ -1130,7 +1144,7 @@ html[data-theme="dark"] {
 		gap: 5px;
 	}
 	#site .mobile-panel .dt-nav a {
-		font-size: 13px;
+		font-size: 15px;
 		min-height: 44px;
 		padding: 10px 12px;
 	}
@@ -1148,7 +1162,7 @@ html[data-theme="dark"] {
 		min-width: 0;
 		max-width: 100%;
 		white-space: normal;
-		font-size: 14px;
+		font-size: 17px;
 		line-height: 1.4;
 	}
 	#site .dt-brand img {

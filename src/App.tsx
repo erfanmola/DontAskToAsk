@@ -1,4 +1,13 @@
-import { createSignal, For, onCleanup, onMount, Show } from "solid-js";
+import {
+	createEffect,
+	createMemo,
+	createSignal,
+	For,
+	on,
+	onCleanup,
+	onMount,
+	Show,
+} from "solid-js";
 import { loadAnalytics } from "./analytics";
 import type { GuideCopy, Translation } from "./i18n";
 import { Icon } from "./icons";
@@ -17,10 +26,14 @@ import { revealTheme } from "./theme";
 
 type Theme = "system" | "light" | "dark";
 export function App(props: { route: Route; copy: Translation }) {
-	const { locale, guide: guideId } = props.route;
-	const t = props.copy.ui;
-	const guide = () => (guideId ? props.copy.guides[guideId] : null);
-	const rtl = locales[locale].dir === "rtl";
+	const locale = () => props.route.locale;
+	const guideId = () => props.route.guide;
+	const t = () => props.copy.ui;
+	const guide = () => {
+		const id = guideId();
+		return id ? props.copy.guides[id] : null;
+	};
+	const rtl = () => locales[locale()].dir === "rtl";
 	const [stars, setStars] = createSignal<Stars>({ status: "loading" });
 	const [theme, setTheme] = createSignal<Theme>("system");
 	const [darkTheme, setDarkTheme] = createSignal(false);
@@ -37,8 +50,8 @@ export function App(props: { route: Route; copy: Translation }) {
 	let template: HTMLTextAreaElement | undefined;
 	let shareInput: HTMLInputElement | undefined;
 	let messageTimer: ReturnType<typeof setTimeout> | undefined;
-	const formatter = new Intl.NumberFormat(locale);
-	const shareUrl = `${siteUrl}${routePath(locale, guideId ?? "ask")}`;
+	const formatter = createMemo(() => new Intl.NumberFormat(locale()));
+	const shareUrl = () => `${siteUrl}${routePath(locale(), guideId() ?? "ask")}`;
 	function setAppearance(value: Theme) {
 		setTheme(value);
 		setDarkTheme(value === "dark");
@@ -97,6 +110,23 @@ export function App(props: { route: Route; copy: Translation }) {
 				)
 				.catch(() => {});
 	});
+	createEffect(
+		on(
+			() => props.route,
+			() => {
+				setChecked([false, false, false, false]);
+				setShowShare(false);
+				setCopyState("");
+				clearTimeout(messageTimer);
+				for (const details of document.querySelectorAll<HTMLDetailsElement>(
+					"#site details[open]",
+				))
+					details.open = false;
+				if (template) template.value = guide()?.template ?? "";
+			},
+			{ defer: true },
+		),
+	);
 	onCleanup(() => clearTimeout(messageTimer));
 	async function copyText(
 		text: string,
@@ -105,11 +135,11 @@ export function App(props: { route: Route; copy: Translation }) {
 		clearTimeout(messageTimer);
 		try {
 			await navigator.clipboard.writeText(text);
-			setCopyState(t.copied);
+			setCopyState(t().copied);
 		} catch {
 			fallback?.focus();
 			fallback?.select();
-			setCopyState(t.copyFailed);
+			setCopyState(t().copyFailed);
 		}
 		messageTimer = setTimeout(() => setCopyState(""), 3500);
 	}
@@ -120,8 +150,8 @@ export function App(props: { route: Route; copy: Translation }) {
 			target="_blank"
 			aria-label={
 				stars().status === "ready"
-					? `${formatter.format(stars().count!)} ${t.stars}`
-					: t.github
+					? `${formatter().format(stars().count!)} ${t().stars}`
+					: t().github
 			}
 		>
 			<Icon name="star" />
@@ -132,14 +162,14 @@ export function App(props: { route: Route; copy: Translation }) {
 				aria-live="polite"
 				aria-label={
 					stars().status === "loading"
-						? t.starsLoading
+						? t().starsLoading
 						: stars().status === "error"
-							? t.starsUnavailable
+							? t().starsUnavailable
 							: undefined
 				}
 			>
 				{stars().status === "ready"
-					? formatter.format(stars().count!)
+					? formatter().format(stars().count!)
 					: stars().status === "loading"
 						? "…"
 						: "—"}
@@ -150,17 +180,17 @@ export function App(props: { route: Route; copy: Translation }) {
 		<details class="language-picker">
 			<summary class="dt-quiet">
 				<Icon name="languages" />
-				<span>{locales[locale].name}</span>
+				<span>{locales[locale()].name}</span>
 			</summary>
 			<div class="language-options">
 				<For each={Object.entries(locales)}>
 					{([code, info]) => (
 						<a
-							href={routePath(code as Locale, guideId ?? "ask")}
+							href={routePath(code as Locale, guideId() ?? "ask")}
 							lang={code}
 							dir={info.dir}
 							hreflang={code}
-							aria-current={locale === code ? "true" : undefined}
+							aria-current={locale() === code ? "true" : undefined}
 						>
 							{info.name}
 						</a>
@@ -174,10 +204,10 @@ export function App(props: { route: Route; copy: Translation }) {
 			type="button"
 			class="theme-toggle dt-quiet"
 			classList={{ "is-dark": darkTheme() }}
-			aria-label={`${t.theme}: ${t.dark}`}
+			aria-label={`${t().theme}: ${t().dark}`}
 			aria-pressed={darkTheme()}
 			aria-disabled={changingTheme()}
-			title={`${t.theme}: ${darkTheme() ? t.dark : t.light}`}
+			title={`${t().theme}: ${darkTheme() ? t().dark : t().light}`}
 			onClick={(event) => void toggleAppearance(event.currentTarget)}
 		>
 			<span class="theme-icon theme-sun">
@@ -196,12 +226,12 @@ export function App(props: { route: Route; copy: Translation }) {
 		</>
 	);
 	const GuideNav = () => (
-		<nav class="dt-nav" aria-label={t.guideLabel}>
+		<nav class="dt-nav" aria-label={t().guideLabel}>
 			<For
 				each={[
-					["ask", t.askGroup],
-					["respond", t.respondGroup],
-					["learn", t.learnGroup],
+					["ask", t().askGroup],
+					["respond", t().respondGroup],
+					["learn", t().learnGroup],
 				]}
 			>
 				{([group, title]) => (
@@ -210,8 +240,8 @@ export function App(props: { route: Route; copy: Translation }) {
 						<For each={guides.filter((item) => item.group === group)}>
 							{(item) => (
 								<a
-									href={routePath(locale, item.id)}
-									aria-current={guideId === item.id ? "page" : undefined}
+									href={routePath(locale(), item.id)}
+									aria-current={guideId() === item.id ? "page" : undefined}
 								>
 									<Icon name={item.icon} />
 									<span>{props.copy.guides[item.id].nav}</span>
@@ -227,13 +257,13 @@ export function App(props: { route: Route; copy: Translation }) {
 		<article class={`dt-chat${p.good ? " dt-good" : ""}`}>
 			<h2 class="dt-chat-label">
 				<Icon name={p.good ? "circle-check" : "circle-minus"} />
-				<span>{p.good ? t.after : t.before}</span>
+				<span>{p.good ? t().after : t().before}</span>
 			</h2>
 			<div class="dt-person">
 				<span class="dt-avatar" aria-hidden="true">
-					{t.initial}
+					{t().initial}
 				</span>
-				<span>{t.questionAuthor}</span>
+				<span>{t().questionAuthor}</span>
 			</div>
 			<p class="dt-bubble">
 				{(p.good ? p.data.after : p.data.before)
@@ -259,25 +289,25 @@ export function App(props: { route: Route; copy: Translation }) {
 	return (
 		<div
 			id="site"
-			data-guide={guideId ?? "not-found"}
-			lang={locale}
-			dir={locales[locale].dir}
+			data-guide={guideId() ?? "not-found"}
+			lang={locale()}
+			dir={locales[locale()].dir}
 		>
 			<a href="#main" class="skip-link">
-				{t.skip}
+				{t().skip}
 			</a>
 			<header class="site-header">
 				<div class="dt-top">
-					<a class="dt-brand" href={routePath(locale, "ask")}>
+					<a class="dt-brand" href={routePath(locale(), "ask")}>
 						<img src="/icon.svg" width="35" height="35" alt="" />
-						<span>{t.brand}</span>
+						<span>{t().brand}</span>
 					</a>
 					<div class="dt-top-actions">
 						<Controls />
 					</div>
 				</div>
 				<details class="mobile-menu" ref={mobileMenu}>
-					<summary aria-label={t.menu}>
+					<summary aria-label={t().menu}>
 						<Icon name="menu" />
 					</summary>
 					<div class="mobile-panel">
@@ -292,19 +322,19 @@ export function App(props: { route: Route; copy: Translation }) {
 				<aside class="dt-sidebar">
 					<GuideNav />
 					<p class="dt-sidebar-note">
-						<strong>{t.sideTitle}</strong>
-						<span>{t.sideBody}</span>
+						<strong>{t().sideTitle}</strong>
+						<span>{t().sideBody}</span>
 					</p>
 				</aside>
-				<main class="dt-reading" id="main">
+				<main class="dt-reading" id="main" tabIndex={-1}>
 					<Show
 						when={guide()}
 						fallback={
 							<section class="dt-hero">
-								<h1>{t.notFound}</h1>
-								<p class="dt-deck">{t.notFoundBody}</p>
-								<a class="dt-primary" href={routePath(locale, "ask")}>
-									{t.home}
+								<h1>{t().notFound}</h1>
+								<p class="dt-deck">{t().notFoundBody}</p>
+								<a class="dt-primary" href={routePath(locale(), "ask")}>
+									{t().home}
 								</a>
 							</section>
 						}
@@ -313,7 +343,7 @@ export function App(props: { route: Route; copy: Translation }) {
 							<>
 								<div class="dt-breadcrumb">
 									<Icon name="book-open" />
-									<span>{t.guideLabel}</span>
+									<span>{t().guideLabel}</span>
 									<span aria-hidden="true">/</span>
 									<span>{data().nav}</span>
 								</div>
@@ -338,37 +368,37 @@ export function App(props: { route: Route; copy: Translation }) {
 											onClick={() => setShowShare(!showShare())}
 										>
 											<Icon name="link" />
-											{t.share}
+											{t().share}
 										</button>
-										<span class="dt-minute">{t.readingTime}</span>
+										<span class="dt-minute">{t().readingTime}</span>
 									</div>
 									<div
 										id="share-guide"
 										class="dt-share-box"
 										hidden={!showShare()}
 									>
-										<label for="share-url">{t.shareHelp}</label>
+										<label for="share-url">{t().shareHelp}</label>
 										<div class="copy-row">
 											<input
 												id="share-url"
 												ref={shareInput}
 												readOnly
-												value={shareUrl}
+												value={shareUrl()}
 												dir="ltr"
 											/>
 											<button
 												type="button"
 												class="dt-quiet"
-												onClick={() => void copyText(shareUrl, shareInput)}
+												onClick={() => void copyText(shareUrl(), shareInput)}
 											>
-												{t.copy}
+												{t().copy}
 											</button>
 										</div>
 									</div>
 								</section>
 								<section
 									class="dt-comparison"
-									aria-label={`${t.before} / ${t.after}`}
+									aria-label={`${t().before} / ${t().after}`}
 								>
 									<Question data={data()} />
 									<Question data={data()} good />
@@ -382,17 +412,19 @@ export function App(props: { route: Route; copy: Translation }) {
 								<section class="dt-checklist" aria-labelledby="check-title">
 									<div class="dt-section-heading">
 										<h2 id="check-title">
-											{guideId === "answer" ? t.answerCheckTitle : t.checkTitle}
+											{guideId() === "answer"
+												? t().answerCheckTitle
+												: t().checkTitle}
 										</h2>
 										<span class="dt-count" aria-live="polite">
-											{t.count
-												.replace(
+											{t()
+												.count.replace(
 													"{count}",
-													formatter.format(checked().filter(Boolean).length),
+													formatter().format(checked().filter(Boolean).length),
 												)
 												.replace(
 													"{total}",
-													formatter.format(data().checks.length),
+													formatter().format(data().checks.length),
 												)}
 										</span>
 									</div>
@@ -419,10 +451,10 @@ export function App(props: { route: Route; copy: Translation }) {
 										</For>
 									</div>
 									<details class="dt-template">
-										<summary>{t.templateTitle}</summary>
+										<summary>{t().templateTitle}</summary>
 										<textarea
 											ref={template}
-											aria-label={t.templateTitle}
+											aria-label={t().templateTitle}
 											rows="7"
 											value={data().template}
 										/>
@@ -436,7 +468,7 @@ export function App(props: { route: Route; copy: Translation }) {
 												)
 											}
 										>
-											{t.copy}
+											{t().copy}
 										</button>
 									</details>
 								</section>
@@ -444,12 +476,13 @@ export function App(props: { route: Route; copy: Translation }) {
 									{copyState()}
 								</div>
 								<div class="dt-next">
-									<span>{t.nextLabel}</span>
+									<span>{t().nextLabel}</span>
 									<a
 										href={routePath(
-											locale,
+											locale(),
 											guides[
-												(guides.findIndex((item) => item.id === guideId) + 1) %
+												(guides.findIndex((item) => item.id === guideId()) +
+													1) %
 													guides.length
 											].id,
 										)}
@@ -457,13 +490,13 @@ export function App(props: { route: Route; copy: Translation }) {
 										{
 											props.copy.guides[
 												guides[
-													(guides.findIndex((item) => item.id === guideId) +
+													(guides.findIndex((item) => item.id === guideId()) +
 														1) %
 														guides.length
 												].id
 											].nav
 										}
-										<Icon name={rtl ? "arrow-left" : "arrow-right"} />
+										<Icon name={rtl() ? "arrow-left" : "arrow-right"} />
 									</a>
 								</div>
 							</>
@@ -471,13 +504,13 @@ export function App(props: { route: Route; copy: Translation }) {
 					</Show>
 					<section class="dt-projects" aria-labelledby="projects-title">
 						<div class="dt-section-heading">
-							<h2 id="projects-title">{t.projectTitle}</h2>
+							<h2 id="projects-title">{t().projectTitle}</h2>
 						</div>
-						<p class="dt-intro">{t.projectsIntro}</p>
+						<p class="dt-intro">{t().projectsIntro}</p>
 						<div class="dt-project-list">
 							<For each={projects}>
 								{(project) => {
-									const copy =
+									const copy = () =>
 										props.copy.projects[
 											project.id as keyof Translation["projects"]
 										];
@@ -485,7 +518,7 @@ export function App(props: { route: Route; copy: Translation }) {
 										<a
 											class="dt-project"
 											href={
-												locale === "en" && project.enUrl
+												locale() === "en" && project.enUrl
 													? project.enUrl
 													: project.url
 											}
@@ -495,8 +528,8 @@ export function App(props: { route: Route; copy: Translation }) {
 												<Icon name={project.icon} />
 											</span>
 											<div>
-												<h3>{copy.title}</h3>
-												<p>{copy.description}</p>
+												<h3>{copy().title}</h3>
+												<p>{copy().description}</p>
 												<small>
 													<bdi>{new URL(project.url).hostname}</bdi>
 												</small>
@@ -508,7 +541,7 @@ export function App(props: { route: Route; copy: Translation }) {
 						</div>
 					</section>
 					<details class="sources">
-						<summary>{t.sources}</summary>
+						<summary>{t().sources}</summary>
 						<a href="https://dontasktoask.com/" target="_blank">
 							Don’t Ask to Ask
 						</a>
@@ -531,20 +564,22 @@ export function App(props: { route: Route; copy: Translation }) {
 							TheBestLanguage
 						</a>
 					</details>
-					<footer class="dt-footer">
-						<span>{t.footer}</span>
-						<div class="dt-footer-links">
-							<a href={repository} target="_blank">
-								<Icon name="git-pull-request" />
-								{t.contribute}
-							</a>
-							<a href="https://developix.ir" target="_blank">
-								Developix
-							</a>
-						</div>
-					</footer>
 				</main>
 			</div>
+			<footer class="site-footer">
+				<div class="dt-footer">
+					<span>{t().footer}</span>
+					<div class="dt-footer-links">
+						<a href={repository} target="_blank">
+							<Icon name="git-pull-request" />
+							{t().contribute}
+						</a>
+						<a href="https://developix.ir" target="_blank">
+							Developix
+						</a>
+					</div>
+				</div>
+			</footer>
 		</div>
 	);
 }

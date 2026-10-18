@@ -24,11 +24,12 @@ export interface Translation {
 		{ title: string; description: string }
 	>;
 }
-const loaders = import.meta.glob<Translation>("./locales/*.json", {
+const translations = import.meta.glob<Translation>("./locales/*.json", {
 	import: "default",
+	eager: true,
 });
-export async function getTranslation(locale: Locale): Promise<Translation> {
-	const loader = loaders[`./locales/${locale}.json`];
-	if (!loader) throw new Error(`Missing translation: ${locale}`);
-	return loader();
+export function getTranslation(locale: Locale): Translation {
+	const translation = translations[`./locales/${locale}.json`];
+	if (!translation) throw new Error(`Missing translation: ${locale}`);
+	return translation;
 }

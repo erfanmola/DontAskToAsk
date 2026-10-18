@@ -28,9 +28,9 @@ All ten guides, checklists, templates, interface strings, and project descriptio
 ## What is included
 
 - SolidJS, strict TypeScript, Vite, and Biome, with Bun and a committed lockfile.
-- Eighty prerendered guide pages, so articles and project links remain readable without JavaScript.
+- Eighty prerendered guide pages, so articles and project links remain readable without JavaScript. Once loaded, guide and language navigation updates immediately in place, with all translations bundled upfront and native browser history preserved.
 - System appearance on first visit, with a persistent sun/moon toggle and animated icons. Theme changes use a circular View Transition from the toggle; reduced-motion preferences and browsers without the API get an immediate update.
-- A compact mobile menu, keyboard navigation, and reduced-motion support.
+- Full-width header and footer surfaces with contained content, larger reading text, a compact mobile menu, keyboard navigation, and reduced-motion support.
 - Editable question templates, clipboard actions, guide sharing, and interactive checklists.
 - Live GitHub stars fetched at runtime with `cache: "no-store"`, refreshed on return to the page and every five minutes while visible. Counts are never stored, prerendered, or replaced by a stale snapshot. If GitHub fails or rate-limits a request, the count becomes a dash and the repository link remains available.
 - The full list of thirteen other Developix projects, with descriptions checked against their source. Project links intentionally omit `noopener` and `noreferrer`, preserving normal referral behavior.
