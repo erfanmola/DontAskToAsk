@@ -12,6 +12,7 @@ export const locales = {
 	es: { name: "Español", dir: "ltr", og: "es_ES" },
 	hi: { name: "हिन्दी", dir: "ltr", og: "hi_IN" },
 	tr: { name: "Türkçe", dir: "ltr", og: "tr_TR" },
+	fr: { name: "Français", dir: "ltr", og: "fr_FR" },
 } as const;
 export type Locale = keyof typeof locales;
 export const guideIds = [
