@@ -23,7 +23,7 @@ Practical, multilingual guides to asking clear questions, giving useful answers,
 
 ## Languages
 
-[فارسی](https://dontasktoask.ir/) · [English](https://dontasktoask.ir/en) · [Deutsch](https://dontasktoask.ir/de) · [Русский](https://dontasktoask.ir/ru) · [العربية](https://dontasktoask.ir/ar) · [Español](https://dontasktoask.ir/es) · [हिन्दी](https://dontasktoask.ir/hi) · [Türkçe](https://dontasktoask.ir/tr)
+[فارسی](https://dontasktoask.ir/) · [English](https://dontasktoask.ir/en) · [Deutsch](https://dontasktoask.ir/de) · [Русский](https://dontasktoask.ir/ru) · [العربية](https://dontasktoask.ir/ar) · [Español](https://dontasktoask.ir/es) · [हिन्दी](https://dontasktoask.ir/hi) · [Türkçe](https://dontasktoask.ir/tr) · [Français](https://dontasktoask.ir/fr)
 
 ## Contributing
 
@@ -41,4 +41,4 @@ Created and maintained by **Erfan Mola**, part of **[Developix](https://developi
 
 **نپرس که بپرسم، فقط بپرس** مجموعه‌ای از راهنماهای کوتاه برای پرسیدن سؤال روشن، پاسخ‌دادن محترمانه و به‌اشتراک‌گذاشتن راه‌حل‌هاست. هدف این راهنماها آسان‌ترکردن کمک‌گرفتن و کمک‌کردن است؛ نه سرزنش‌کردن تازه‌کارها.
 
-راهنماها به فارسی، انگلیسی، آلمانی، روسی، عربی، اسپانیایی، هندی و ترکی در دسترس‌اند. برای اصلاح متن‌ها یا مشارکت در ترجمه، فایل‌های [`src/locales/`](src/locales/) را ویرایش کنید و درخواست تغییر بفرستید.
+راهنماها به فارسی، انگلیسی، آلمانی، روسی، عربی، اسپانیایی، هندی، ترکی و فرانسوی در دسترس‌اند. برای اصلاح متن‌ها یا مشارکت در ترجمه، فایل‌های [`src/locales/`](src/locales/) را ویرایش کنید و درخواست تغییر بفرستید.

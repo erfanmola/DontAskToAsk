@@ -1,0 +1,307 @@
+{
+  "ui": {
+    "brand": "Don't Ask to Ask",
+    "guideLabel": "Un guide pour bien poser ses questions",
+    "sideTitle": "De meilleures questions. De meilleures conversations.",
+    "sideBody": "Des guides courts et pratiques pour demander et apporter de l’aide en ligne.",
+    "share": "Partager ce guide",
+    "shareHelp": "Partagez ce lien dans votre conversation :",
+    "readingTime": "Environ 2 minutes de lecture",
+    "before": "Une conversation qui tourne court",
+    "after": "Une question à laquelle on peut répondre",
+    "initial": "S",
+    "person": "Sara",
+    "checkTitle": "Avant d’envoyer votre question",
+    "templateTitle": "Un point de départ pour votre prochaine question",
+    "nextLabel": "Poursuivre la conversation",
+    "projectsTitle": "Plus de projets Developix",
+    "projectsIntro": "D’autres projets pour celles et ceux qui aiment apprendre et créer.",
+    "footer": "Par Erfan Mola · Un projet Developix",
+    "contribute": "Contribuer",
+    "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !",
+    "tagline": "De meilleures questions. De meilleures conversations.",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "theme": "Apparence",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système",
+    "askGroup": "Poser une question",
+    "respondGroup": "Répondre et faire le suivi",
+    "learnGroup": "Apprendre et choisir",
+    "skip": "Aller au guide",
+    "github": "Voir sur GitHub",
+    "starsLoading": "Chargement des étoiles GitHub",
+    "starsUnavailable": "Nombre d’étoiles indisponible",
+    "stars": "étoiles sur GitHub",
+    "count": "{count} sur {total} prêts",
+    "copy": "Copier",
+    "copied": "Copié",
+    "copyFailed": "Sélectionnez et copiez le texte ci-dessous.",
+    "shareTitle": "Partager ce guide",
+    "sources": "Sources et inspiration",
+    "notFound": "Page introuvable",
+    "notFoundBody": "Ce guide n’existe pas. Choisissez un guide dans le menu.",
+    "home": "Lire le guide principal",
+    "answerCheckTitle": "Avant d’envoyer votre réponse",
+    "projectTitle": "Autres projets",
+    "questionAuthor": "Sara"
+  },
+  "guides": {
+    "ask": {
+      "nav": "Posez directement",
+      "title": "Ne demandez pas si vous pouvez demander.\nDemandez.",
+      "deck": "Pas besoin de demander la permission avant de poser une question. Expliquez le problème dès votre premier message pour que l’on voie comment vous aider.",
+      "before": "Salut, quelqu’un ici connaît Java ? Je peux poser une question ?",
+      "beforeResult": "Personne ne connaît encore la question, ni ne sait s’il peut aider.",
+      "after": "Bonjour ! J’essaie de convertir la chaîne « 3.5 » en nombre en Java. Integer.parseInt lève une NumberFormatException. Que dois-je utiliser pour lire un nombre décimal ?",
+      "afterResult": "L’objectif, l’approche et l’erreur sont clairs. Il y a quelque chose à quoi répondre.",
+      "bodyTitle": "Pourquoi demander directement aide-t-il ?",
+      "bodyOne": "« Quelqu’un connaît cet outil ? » demande aux gens de s’engager avant de connaître la question. En publiant directement la question, toute personne ayant les connaissances utiles peut intervenir quand elle a le temps.",
+      "bodyTwo": "Décrivez votre objectif, ce que vous avez essayé et ce qui s’est réellement passé. Votre question n’a pas besoin d’être longue ni parfaite. Elle doit simplement donner assez de contexte pour que l’on comprenne le problème.",
+      "note": "Être débutant, c’est normal. Ce guide doit faciliter le début des conversations. Soyez bienveillant envers celles et ceux qui apprennent encore à poser leurs questions.",
+      "checks": [
+        "J’ai expliqué mon objectif.",
+        "J’ai inclus la sortie réelle ou l’erreur.",
+        "J’ai décrit ce que j’ai essayé.",
+        "J’ai retiré les informations privées."
+      ],
+      "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !"
+    },
+    "hello": {
+      "nav": "Bonjour, avec une question",
+      "title": "Dites bonjour.\nEt posez votre question.",
+      "deck": "Une salutation amicale est toujours bienvenue. Incluez votre question dans le même message pour que la conversation puisse avancer.",
+      "before": "Salut !\nY a quelqu’un ?\nJ’ai un problème.\nTu peux m’aider ?",
+      "beforeResult": "L’autre personne doit attendre le message suivant à plusieurs reprises.",
+      "after": "Bonjour ! Je veux afficher la date du jour au format yyyy-MM-dd en Java. Ma sortie actuelle inclut aussi l’heure. Comment afficher uniquement la date ?",
+      "afterResult": "Quelqu’un peut répondre même s’il lit votre message plus tard.",
+      "bodyTitle": "Gardez la salutation. Supprimez l’attente.",
+      "bodyOne": "Dans une conversation écrite, votre message peut être lu des minutes ou des heures plus tard. Si votre seul message est « Bonjour », la réponse lance une nouvelle attente avant que la vraie question n’arrive.",
+      "bodyTwo": "Regroupez la salutation et la question. Pour un problème complexe, commencez par un court résumé et le contexte essentiel, puis ajoutez les détails.",
+      "note": "Il ne s’agit pas d’être sec. « Bonjour, je rencontre ce problème… » est à la fois amical et utile.",
+      "checks": [
+        "J’ai expliqué mon objectif.",
+        "J’ai inclus la sortie réelle ou l’erreur.",
+        "J’ai décrit ce que j’ai essayé.",
+        "J’ai retiré les informations privées."
+      ],
+      "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !"
+    },
+    "xy": {
+      "nav": "Expliquez le vrai problème",
+      "title": "Commencez par votre objectif.\nPuis votre approche.",
+      "deck": "Ne demander que votre solution envisagée peut masquer le vrai problème. C’est ce qu’on appelle souvent le problème XY.",
+      "before": "Comment récupérer les trois derniers caractères d’un nom de fichier ?",
+      "beforeResult": "Une réponse correcte pourrait quand même résoudre le mauvais problème.",
+      "after": "Je dois trouver l’extension d’un fichier. J’ai pensé à prendre ses trois derniers caractères, mais certains fichiers se terminent par .jpeg. Quelle approche fonctionnerait mieux ?",
+      "afterResult": "Le véritable objectif est visible, on peut donc suggérer une meilleure approche.",
+      "bodyTitle": "Comment survient le problème XY ?",
+      "bodyOne": "Vous voulez faire X et supposez que Y est le moyen d’y parvenir. Vous bloquez sur Y et ne posez de questions que sur Y. Quelqu’un vous aide sur cette étape sans savoir ce dont vous avez réellement besoin.",
+      "bodyTwo": "Expliquez d’abord votre objectif et vos contraintes. Décrivez ensuite ce que vous avez essayé et pourquoi. Si une approche particulière est imposée, expliquez aussi cette contrainte.",
+      "note": "Il est tout à fait possible de poser une question sur une approche précise. Indiquez l’objectif et les contraintes pour obtenir des conseils adaptés au vrai problème.",
+      "checks": [
+        "J’ai expliqué mon objectif.",
+        "J’ai inclus la sortie réelle ou l’erreur.",
+        "J’ai décrit ce que j’ai essayé.",
+        "J’ai retiré les informations privées."
+      ],
+      "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !"
+    },
+    "pv": {
+      "nav": "Demandez en public",
+      "title": "Demandez en public.\nQue la réponse profite à d’autres.",
+      "deck": "Quand une question a sa place dans un groupe ou un forum, posez-la là. Plus de personnes peuvent aider, et d’autres peuvent apprendre de la réponse.",
+      "before": "Salut, je t’ai vu coder dans le groupe. Je peux t’écrire en privé pour que tu règles mon problème ?",
+      "beforeResult": "Une seule personne est mise au pied du mur pour fournir la réponse.",
+      "after": "Bonjour à tous ! L’installation de ce paquet provoque un conflit de dépendances. Voici les versions et l’erreur complète. Que dois-je vérifier ?",
+      "afterResult": "Plusieurs personnes peuvent aider, et la réponse reste utile à d’autres.",
+      "bodyTitle": "Demander de l’aide en respectant le temps des autres",
+      "bodyOne": "Demander dans un espace partagé donne généralement à plus de personnes l’occasion d’aider et garde les connaissances utiles accessibles. Consultez les règles de la communauté et demandez la permission avant de passer en message privé.",
+      "bodyTwo": "Personne n’est disponible en permanence ni obligé de répondre. Si vous avez besoin d’un accompagnement suivi ou d’un délai de réponse garanti, envisagez un mentor ou un support professionnel.",
+      "note": "Ne publiez jamais de mots de passe, de données personnelles ou d’informations confidentielles. Pour les sujets privés, utilisez un canal de support approprié ou une conversation privée acceptée par les deux parties.",
+      "checks": [
+        "J’ai expliqué mon objectif.",
+        "J’ai inclus la sortie réelle ou l’erreur.",
+        "J’ai décrit ce que j’ai essayé.",
+        "J’ai retiré les informations privées."
+      ],
+      "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !"
+    },
+    "code": {
+      "nav": "Incluez le code et les erreurs",
+      "title": "Montrez le problème.\nIncluez le code et l’erreur.",
+      "deck": "Au lieu de « mon code ne marche pas », partagez un petit exemple exécutable du problème, avec les résultats attendus et obtenus.",
+      "before": "J’ai écrit du code pour envoyer un e-mail, mais ça ne marche pas. Qu’est-ce qui ne va pas ?",
+      "beforeResult": "Sans code, sans erreurs et sans détails sur l’environnement, les réponses relèvent surtout de la devinette.",
+      "after": "Cette requête devrait réussir, mais renvoie 401 :\nfetch(\"/api/send\", { method: \"POST\" })\nLe point d’accès exige une connexion. Je n’ai pas effacé mon cookie de session. Que dois-je vérifier dans la requête ?",
+      "afterResult": "Il y a un exemple concret à examiner.",
+      "bodyTitle": "Petit, complet et reproductible",
+      "bodyOne": "Retirez le code sans rapport, mais gardez tout ce qui est nécessaire pour reproduire le problème. Indiquez les versions des outils, les étapes pour l’exécuter, l’erreur complète et en quoi le résultat obtenu diffère de celui attendu.",
+      "bodyTwo": "Partagez le code sous forme de texte dans un bloc de code pour qu’il puisse être lu, recherché et exécuté. Une capture d’écran peut ajouter du contexte, mais ne doit pas remplacer le texte du code ou de l’erreur.",
+      "note": "Remplacez les mots de passe, jetons et vraies données utilisateur par des valeurs fictives avant de partager. Exécutez votre exemple une fois pour vérifier qu’il reproduit toujours le problème.",
+      "checks": [
+        "J’ai expliqué mon objectif.",
+        "J’ai inclus la sortie réelle ou l’erreur.",
+        "J’ai décrit ce que j’ai essayé.",
+        "J’ai retiré les informations privées."
+      ],
+      "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !"
+    },
+    "bestlanguage": {
+      "nav": "Le meilleur langage de programmation",
+      "title": "Le meilleur langage ?\nPour quoi faire ?",
+      "deck": "Partez de ce que vous voulez créer. Votre objectif, vos contraintes et votre expérience sont des critères plus utiles que la popularité ou la fidélité à un langage.",
+      "before": "Quel est le meilleur langage de programmation ? Python est-il meilleur que JavaScript ?",
+      "beforeResult": "Sans objectif, « meilleur » n’a pas de sens clair.",
+      "after": "Je veux créer un petit outil qui trie des fichiers CSV. Je suis débutant et je n’ai besoin de l’exécuter que sur mon propre ordinateur. Quelles options conviennent, et pourquoi ?",
+      "afterResult": "L’objectif, l’expérience et l’environnement donnent une base utile aux recommandations.",
+      "bodyTitle": "Choisir l’objectif avant l’outil",
+      "bodyOne": "Pour apprendre, choisissez un petit projet précis. Cherchez ensuite des outils disposant de ressources d’apprentissage, de bibliothèques et d’une communauté adaptées. Comparez les langages pour ce projet au lieu de chercher un vainqueur pour toutes les tâches possibles.",
+      "bodyTwo": "Pour un usage en production, tenez compte de l’environnement d’exécution, de l’expérience de l’équipe, de la maintenance, des bibliothèques disponibles et des contraintes de performance. Restez sur un langage assez longtemps pour construire quelque chose. Revoyez votre choix quand vos besoins ou les éléments à votre disposition évoluent.",
+      "note": "Votre expérience compte, mais d’autres peuvent avoir des besoins différents. Expliquez votre raisonnement et discutez des compromis au lieu de dénigrer des outils ou les personnes qui les utilisent.",
+      "checks": [
+        "Je sais ce que je veux créer.",
+        "J’ai précisé où cela doit s’exécuter.",
+        "J’ai décrit mon expérience et mes contraintes.",
+        "J’ai défini des critères de comparaison utiles."
+      ],
+      "template": "Je veux créer [projet] pour [utilisateurs ou objectif].\nMon expérience : [expérience actuelle].\nCela doit s’exécuter sur [environnement].\nContraintes importantes : [temps, équipe, maintenance ou performance].\nJe compare [options]. Quels sont leurs avantages et inconvénients pour ces besoins ?"
+    },
+    "bugreport": {
+      "nav": "Rédiger un rapport de bug utile",
+      "title": "Signalez le bug\npour qu’on puisse le reproduire.",
+      "deck": "Un rapport utile indique ce que vous avez fait, ce que vous attendiez et ce qui s’est passé. Incluez les étapes nécessaires pour constater le problème.",
+      "before": "Votre site est cassé ! Réparez-le, s’il vous plaît.",
+      "beforeResult": "L’emplacement du problème et les étapes pour y parvenir manquent.",
+      "after": "Dans Firefox, j’ouvre les Paramètres, je change la langue et je clique sur Enregistrer. Je m’attends à ce que la nouvelle langue soit conservée, mais l’actualisation rétablit l’ancienne. Je peux aussi le reproduire dans une fenêtre de navigation privée.",
+      "afterResult": "Le comportement, l’attente et les étapes de reproduction sont clairs.",
+      "bodyTitle": "Rapportez des observations. Signalez vos suppositions.",
+      "bodyOne": "Indiquez l’environnement, la version de l’application et les étapes les plus courtes qui reproduisent le problème. S’il ne survient que parfois, dites-le et précisez à quelle fréquence vous l’avez observé. Distinguez ce que vous avez constaté de ce que vous pensez en être la cause.",
+      "bodyTwo": "Pour les problèmes visuels, une capture d’écran aide. Pour les erreurs ou le code, incluez du texte que l’on peut copier. Ajoutez tout contournement trouvé pour que le rapport soit utile aux utilisateurs comme aux mainteneurs.",
+      "note": "Retirez les mots de passe, jetons, identifiants de session et données utilisateur des rapports et captures d’écran. Signalez les failles de sécurité via le canal privé prévu par le projet.",
+      "checks": [
+        "J’ai inclus les étapes de reproduction.",
+        "Les comportements attendu et obtenu sont clairs.",
+        "J’ai indiqué la version et l’environnement.",
+        "J’ai retiré les informations confidentielles."
+      ],
+      "template": "Résumé : [problème précis]\nEnvironnement : [système, navigateur et version]\nÉtapes pour reproduire :\n1. [étape]\n2. [étape]\nAttendu : [résultat]\nObtenu : [comportement ou texte de l’erreur]\nFréquence : [toujours ou parfois]\nContournement : [le cas échéant]"
+    },
+    "followup": {
+      "nav": "Partagez ce qui a fonctionné",
+      "title": "C’est résolu ?\nPartagez la solution.",
+      "deck": "Obtenir une réponse ne met pas fin à la conversation. Indiquez ce qui s’est passé quand vous avez essayé les suggestions pour que le prochain lecteur puisse aussi en profiter.",
+      "before": "C’est réglé, merci.",
+      "beforeResult": "Le prochain lecteur ne peut pas savoir quelle suggestion a fonctionné.",
+      "after": "Merci ! Corriger le chemin du fichier a réglé le problème. Le chemin relatif était résolu depuis le répertoire de travail, et non depuis le dossier du fichier de configuration. J’ai ajouté l’exemple corrigé à la question.",
+      "afterResult": "Le changement efficace et la raison pour laquelle il a aidé sont clairs.",
+      "bodyTitle": "Bouclez la boucle",
+      "bodyOne": "Quand vous essayez une suggestion, partagez le résultat réel. Si le problème persiste, expliquez ce qui a changé et quelle erreur est toujours présente. Donnez à la personne suivante quelque chose de plus utile que « ça n’a pas marché ».",
+      "bodyTwo": "Si vous trouvez la solution vous-même, expliquez-la dans le même fil. Utilisez la fonction de réponse acceptée lorsqu’elle existe. Ajoutez les précisions importantes à la question d’origine si les règles de la communauté le permettent.",
+      "note": "Laissez les questions et solutions utiles accessibles une fois votre problème réglé. Utilisez les outils de modification ou de suppression de la plateforme pour gérer les informations personnelles ou confidentielles.",
+      "checks": [
+        "J’ai testé la suggestion.",
+        "J’ai identifié le changement efficace.",
+        "J’ai expliqué pourquoi il a aidé.",
+        "J’ai gardé la solution dans le même fil."
+      ],
+      "template": "J’ai essayé [suggestion].\nRésultat réel : [sortie]\n[Changement précis] a résolu le problème / [problème restant] se produit toujours.\nDétail important : [courte explication]\nExemple corrigé : [exemple]"
+    },
+    "answer": {
+      "nav": "Aider sans rabaisser",
+      "title": "Une bonne réponse\nmontre la voie à suivre.",
+      "deck": "De meilleures questions méritent aussi des réponses attentionnées. Demandez clairement les détails manquants, et ne prenez pas le fait d’être débutant comme prétexte pour rabaisser quelqu’un.",
+      "before": "C’est la base. Va chercher avant de demander !",
+      "beforeResult": "Cela n’explique ni ce qui manque, ni quoi faire ensuite.",
+      "after": "Pourriez-vous ajouter la version de l’outil et un petit exemple d’entrée ? Cette section de la documentation explique la conversion. Si votre sortie est différente, partagez l’erreur exacte pour que nous puissions cerner le problème.",
+      "afterResult": "Les informations manquantes et l’étape suivante sont claires et respectueuses.",
+      "bodyTitle": "Expliquez aussi le raisonnement",
+      "bodyOne": "Expliquez pourquoi votre réponse fonctionne et dans quels cas elle s’applique. Si vous avez un doute, énoncez vos hypothèses et vos incertitudes. Un lien pertinent aide, mais ajoutez une courte explication pour que la réponse ne dépende pas entièrement de la disponibilité de ce lien.",
+      "bodyTwo": "Quand il manque du contexte, demandez des informations précises. Concentrez-vous sur le problème plutôt que sur les compétences ou la personnalité de la personne qui demande. Si vous n’avez ni le temps ni l’envie, rien ne vous oblige à participer à la conversation.",
+      "note": "Partager un guide doit aider quelqu’un à passer à l’étape suivante. Ajoutez une phrase expliquant son rapport avec la question plutôt que de vous en servir pour congédier la personne.",
+      "checks": [
+        "J’ai traité le vrai problème.",
+        "J’ai énoncé mes hypothèses et limites.",
+        "J’ai ajouté un raisonnement ou une source pertinente.",
+        "Ma formulation est respectueuse."
+      ],
+      "template": "Pour enquêter, nous avons besoin de [information précise].\nSi [hypothèse] est correcte, essayez [suggestion].\nRaison : [courte explication]\nSource : [lien pertinent]\nSi le résultat diffère, ajoutez [détails nécessaires pour continuer]."
+    },
+    "aihelp": {
+      "nav": "Obtenir de l’aide sur du code généré par IA",
+      "title": "L’IA a écrit le code ?\nC’est à vous d’expliquer le problème.",
+      "deck": "Expliquez ce que vous avez exécuté, ce que vous attendiez et où cela a échoué. Une longue transcription générée ne remplace pas ce contexte.",
+      "before": "L’IA m’a donné ce code et il ne s’exécute pas. Voici toute la conversation. Quelqu’un peut le corriger ?",
+      "beforeResult": "Quelqu’un doit retrouver l’objectif, le code pertinent et l’erreur réelle au milieu d’une longue transcription.",
+      "after": "J’ai utilisé un outil d’IA pour m’aider à convertir du CSV en JSON. Ce petit exemple échoue sur une entrée vide. J’attends un tableau vide ; j’ai inclus l’entrée et l’erreur réelle. Quelle partie de la gestion de l’entrée dois-je examiner ?",
+      "afterResult": "L’origine du code est claire, et il y a un problème précis à examiner.",
+      "bodyTitle": "Vérifiez avant de partager",
+      "bodyOne": "Isolez le code pertinent, exécutez-le et relevez l’erreur réelle. Si vous ne comprenez pas une partie, identifiez-la et demandez comment fonctionne sa logique. Inutile de prétendre avoir écrit le code vous-même.",
+      "bodyTwo": "Quand vous répondez à d’autres, ne transmettez pas de texte généré sans le vérifier. Ouvrez ses sources, testez l’exemple et expliquez ses limites. Respectez les règles de la communauté concernant les contributions assistées par IA.",
+      "note": "Gardez les données confidentielles hors de vos questions et des outils d’IA. L’objectif est d’examiner le problème, quelle que soit la personne ou l’outil qui a écrit le code.",
+      "checks": [
+        "J’ai expliqué mon objectif.",
+        "J’ai inclus la sortie réelle ou l’erreur.",
+        "J’ai décrit ce que j’ai essayé.",
+        "J’ai retiré les informations privées."
+      ],
+      "template": "Bonjour ! J’essaie de [objectif].\nJ’utilise [outil et version].\nJe m’attendais à [résultat], mais j’obtiens [sortie réelle ou erreur].\nVoici un petit exemple qui reproduit le problème : [code ou étapes]\nJusqu’ici, j’ai essayé [tentatives précédentes].\nMerci pour toute piste !"
+    }
+  },
+  "projects": {
+    "ronio": {
+      "title": "Ronio",
+      "description": "Palettes de couleurs, générateurs de dégradés et outils de conception web."
+    },
+    "smusher": {
+      "title": "Smusher",
+      "description": "Optimisez et compressez des images PNG, JPEG, SVG et WebP."
+    },
+    "filito": {
+      "title": "Filito",
+      "description": "Partage de fichiers direct, de pair à pair."
+    },
+    "htmhell": {
+      "title": "HTMHell",
+      "description": "Des exemples de mauvaises pratiques de conception, de structure et de contenu web."
+    },
+    "nojquery": {
+      "title": "No JQuery",
+      "description": "Un aide-mémoire des équivalents en JavaScript pur des méthodes jQuery."
+    },
+    "theperfectsite": {
+      "title": "The Perfect Site",
+      "description": "Un rappel de l’importance de la simplicité, de la rapidité, de la légèreté des pages et de l’accessibilité."
+    },
+    "thebestlanguage": {
+      "title": "The Best Language",
+      "description": "Choisissez un langage selon vos objectifs et vos besoins, plutôt que par fidélité ou par esprit de querelle."
+    },
+    "pixoro": {
+      "title": "Pixoro",
+      "description": "Une collection de fonds d’écran avec une chaîne et un bot Telegram."
+    },
+    "urixo": {
+      "title": "Urixo",
+      "description": "Classez les questions par catégorie et notifiez les groupes Telegram connectés."
+    },
+    "qiblafind": {
+      "title": "QiblaFind",
+      "description": "Direction de la qibla, horaires de prière, calendrier hégirien et outils de prière."
+    },
+    "onlinecompass": {
+      "title": "OnlineCompass",
+      "description": "Une boussole dans le navigateur et des outils de navigation."
+    },
+    "twitterdownloader": {
+      "title": "Twitter Video Downloader",
+      "description": "Trouvez les liens de téléchargement MP4 des vidéos Twitter et X."
+    },
+    "developix": {
+      "title": "Developix",
+      "description": "La collection de projets et d’outils Developix."
+    }
+  }
+}
